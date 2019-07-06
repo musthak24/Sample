@@ -1,0 +1,21 @@
+{% load staticfiles %}
+{% load static %}
+{% load simplepush_tags %}
+
+{#<html>#}
+<script id="simplepush-js" type="text/javascript" src="/static/simplepush/simplepush.js"></script>
+<script id="service-worker-js" type="text/javascript" src="/static/simplepush/simplepush_serviceworker.js"></script>
+<link rel="manifest" href="/simplepush/manifest">
+<head>
+</head>
+<body>
+<p> Hello World! </p>
+<form action=" " method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+{{ f.as_p }}
+
+<input type="submit" type="submit" value="Submit">
+</form>
+{% simplepush_html_button %}
+{#<button id="simplepush-subscribe-button" data-url="/simplepush/save_information">Subscribe to Push Messaging</button>#}
+</body>

@@ -1,0 +1,4 @@
+{% if request.user.is_authenticated or group %}
+<div id="simplepush-message" hidden></div>
+    <h1>Welcome Message</h1>
+{% endif %}
